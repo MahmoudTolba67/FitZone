@@ -1,0 +1,66 @@
+<section class="hero-section d-flex align-items-center text-center">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8" data-aos="zoom-in">
+        <h1 class="display-1 fw-black text-white mb-3">UNLEASH YOUR <span class="text-accent">BEAST</span></h1>
+        <p class="lead text-light mb-5 fs-4">ابدأ رحلتك الآن في FitZone، المكان الذي تُصنع فيه الأبطال بأفضل المعدات وأكفأ المدربين.</p>
+        <div class="d-flex justify-content-center gap-3">
+          <button class="btn btn-accent btn-lg px-5 py-3 fw-bold" routerLink="/contact">Join Now</button>
+          <button class="btn btn-outline-light btn-lg px-5 py-3 fw-bold" routerLink="/services">Our Services</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-5 bg-black">
+  <div class="container py-5">
+    <div class="row g-4">
+@for (feature of features; track $index) {
+        <div class="col-md-4">
+          <div class="feature-card p-4 text-center h-100 border-0">
+            <div class="feature-img-wrapper mb-4">
+              <img [src]="feature.image" [alt]="feature.title" class="img-fluid rounded-circle">
+            </div>
+            <h3 class="text-white fw-bold mb-3">{{ feature.title }}</h3>
+            <p class="text-muted">{{ feature.desc }}</p>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>
+
+<section class="py-5 bg-dark-custom">
+  <div class="container py-5">
+    <h2 class="text-center text-white fw-bold mb-5">What Our <span class="text-accent">Members</span> Say</h2>
+    <div class="row g-4 justify-content-center">
+@for (item of testimonials; track item.name) {
+  <div class="col-md-5">
+    <div class="testimonial-card p-4 border-accent-left h-100">
+      <i class="bi bi-quote fs-1 text-accent opacity-50"></i>
+      
+      
+      <p class="text-light fs-5 mb-4 italic">"{{ item.feedback }}"</p>
+      
+      <div class="d-flex align-items-center">
+        <div class="ms-3">
+          <h5 class="text-white fw-bold mb-0">{{ item.name }}</h5>
+          <small class="text-accent">{{ item.role }}</small>
+        </div>
+      </div>
+      <div class="rating-stars mb-3">
+        @for (star of [1,2,3,4,5]; track star) {
+          <i class="bi" 
+             [class.bi-star-fill]="item.rating >= star" 
+             [class.bi-star]="item.rating < star"
+             [class.text-accent]="item.rating >= star"
+             class="me-1"></i>
+        }
+      </div>
+    </div>
+  </div>
+}
+    </div>
+  </div>
+</section>

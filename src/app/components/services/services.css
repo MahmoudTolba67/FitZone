@@ -1,0 +1,64 @@
+.service-card {
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  cursor: pointer;
+  background-color: #1a1a1a !important; 
+}
+
+.service-card:hover {
+  transform: translateY(-15px);
+  border-color: var(--accent) !important;
+  box-shadow: 0 10px 30px rgba(255, 77, 0, 0.2);
+}
+
+.card-icon i {
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover .card-icon i {
+  transform: scale(1.2);
+}
+
+.btn-accent {
+  background-color: var(--accent);
+  color: white;
+  border: none;
+  transition: 0.3s;
+}
+
+.btn-accent:hover {
+  background-color: #e64500;
+  box-shadow: 0 5px 15px rgba(255, 77, 0, 0.4);
+}
+
+.card-title {
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}.service-card {
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  min-height: 350px; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 15px !important; 
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(255, 77, 0, 0.4);
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), var(--bg-img) !important;
+}
+
+.card-title {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); 
+}
+
+.card-text {
+  color: #e0e0e0 !important;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.9);
+}

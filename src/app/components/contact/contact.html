@@ -1,0 +1,107 @@
+<section class="contact-section py-5 bg-black min-vh-100">
+  <div class="container py-5">
+    <div class="text-center mb-5">
+      <h2 class="display-4 fw-bold text-white">Contact <span class="us">Us</span></h2>
+      <p class="text-muted">نحن هنا للإجابة على استفساراتك ومساعدتك في البدء</p>
+    </div>
+
+    <div class="row g-5">
+      <div class="col-lg-5 text-white">
+        <div class="contact-info-card p-4 bg-dark border-secondary h-100">
+          <h3 class="fw-bold mb-4">Get In Touch</h3>
+          
+          <div class="d-flex align-items-center mb-4">
+            <div class="icon-box me-3 text-accent fs-3">
+              <i class="bi bi-geo-alt"></i>
+            </div>
+            <div>
+              <h6 class="mb-0 fw-bold">Location</h6>
+              <p class="text-muted mb-0">123 Street, Fit City, Egypt</p>
+            </div>
+          </div>
+
+          <div class="d-flex align-items-center mb-4">
+            <div class="icon-box me-3 text-accent fs-3">
+              <i class="bi bi-envelope"></i>
+            </div>
+            <div>
+              <h6 class="mb-0 fw-bold">Email</h6>
+              <p class="text-muted mb-0">info@fitzone.com</p>
+            </div>
+          </div>
+
+          <div class="d-flex align-items-center mb-4">
+            <div class="icon-box me-3 text-accent fs-3">
+              <i class="bi bi-phone"></i>
+            </div>
+            <div>
+              <h6 class="mb-0 fw-bold">Call Us</h6>
+              <p class="text-muted mb-0">+20 123 456 789</p>
+            </div>
+          </div>
+
+          <hr class="border-secondary my-4">
+          
+       <h5 class="fw-bold mb-3 text-white">Follow Us</h5>
+<div class="d-flex gap-3">
+  <a href="#" class="social-icon" title="Facebook">
+    <i class="bi bi-facebook"></i>
+  </a>
+  <a href="#" class="social-icon" title="Instagram">
+    <i class="bi bi-instagram"></i>
+  </a>
+  <a href="#" class="social-icon" title="Twitter">
+    <i class="bi bi-twitter-x"></i>
+  </a>
+  <a href="#" class="social-icon" title="YouTube">
+    <i class="bi bi-youtube"></i>
+  </a>
+</div>
+        </div>
+      </div>
+
+      <div class="col-lg-7">
+        <div class="contact-form-card p-4 bg-dark border-secondary h-100">
+          <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label class="form-label text-white" >Name</label>
+                <input type="text" name="name" ngModel class="form-control bg-black text-white border-secondary" placeholder="Your Name" required>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label text-white">Email</label>
+                <input type="email" name="email" ngModel class="form-control bg-black text-white border-secondary" placeholder="Your Email" required>
+              </div>
+              <div class="col-12">
+                <label class="form-label text-white">Subject</label>
+                <input type="text" name="subject" ngModel class="form-control bg-black text-white border-secondary" placeholder="Subject">
+              </div>
+              <div class="col-12">
+                <label class="form-label text-white">Message</label>
+                <textarea name="message" ngModel class="form-control bg-black text-white border-secondary" rows="5" placeholder="How can we help you?" required></textarea>
+              </div>
+              <div class="col-12 mt-4">
+                <button type="submit" class="btn btn-accent w-100 py-3 fw-bold" id="send">Send Message</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+@if(showPopUp){
+<div class="row h-100 align-items-center justify-content-center popup">
+  <div class="col-md-6 col-lg-4">
+    <div class="pop-up-card p-4 text-center" data-aos="fade-up">
+      <div class="pop-up-icon-box mx-auto mb-4">
+        <i class="bi bi-check-circle-fill"></i>
+      </div>
+      <h2 class="fw-bold mb-3">FIT<span class="text-accent">ZONE</span></h2>
+      <p class="text-muted mb-4">Thanks  {{name}} for contacting us! We'll get back to you soon.</p>
+      <button class="btn btn-accent btn-lg w-100" (click)="close()">Close</button>
+    </div>
+  </div>
+</div>
+}

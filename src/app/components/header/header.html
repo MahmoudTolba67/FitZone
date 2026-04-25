@@ -1,0 +1,26 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-black py-3 border-bottom border-secondary sticky-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold fs-3" routerLink="/home">FIT<span class="text-accent">ZONE</span></a>
+    
+    <button class="navbar-toggler" type="button" (click)="toggleMenu()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <div class="collapse navbar-collapse" [class.show]="!isMenuCollapsed" id="navbarNav">
+      <ul class="navbar-nav ms-auto align-items-lg-center">
+        <li class="nav-item">
+          <a class="nav-link text-white px-3" routerLink="/home" (click)="isMenuCollapsed = true"><span class="links">Homes</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white px-3" routerLink="/services" (click)="isMenuCollapsed = true"><span class="links">Services</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white px-3" routerLink="/contact" (click)="isMenuCollapsed = true"><span class="links">Contact</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="btn btn-accent ms-lg-3 px-4 fw-bold" routerLink="/contact" (click)="isMenuCollapsed = true">Join Now</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
